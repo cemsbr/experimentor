@@ -22,3 +22,9 @@ It helps to execute local and remote commands in parallel.
 - Source code and issues/bug reports: `GitHub
   <https://github.com/cemsbr/expyrimenter>`_
 
+
+
+.. image:: https://d2weczhvl823v0.cloudfront.net/cemsbr/expyrimenter/trend.png
+   :alt: Bitdeli badge
+   :target: https://bitdeli.com/free
+
