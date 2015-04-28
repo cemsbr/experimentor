@@ -1,4 +1,4 @@
-from . import Runnable
+from .runnable import Runnable
 import subprocess
 from subprocess import CalledProcessError
 import logging
@@ -62,7 +62,8 @@ class Shell(Runnable):
                 output = subprocess.check_output(self._cmd, **kwargs).strip()
             self._logger.success(self.title)
         except CalledProcessError as e:
-            self._logger.failure(e, self.title, level=self.failure_level)
+            self._logger.failure(self.title, exception=e,
+                                 level=self.failure_level)
             raise e
         finally:
             self.run_pos()

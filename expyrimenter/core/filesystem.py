@@ -1,4 +1,4 @@
-from . import SSH
+from .ssh import SSH
 
 
 class Filesystem:

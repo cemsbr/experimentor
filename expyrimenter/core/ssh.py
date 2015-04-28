@@ -1,8 +1,8 @@
 from .shell import Shell
+from .expylogger import ExpyLogger
 from time import sleep
 import random
 from shlex import quote
-import logging
 
 
 class SSH(Shell):
@@ -46,13 +46,13 @@ class SSH(Shell):
         :param str logger_name: Logger name. Default: this class name.
         """
         if title is None:
-            title = 'SSH test on "{}"'.format(params)
+            title = 'SSH test on {}'.format(params)
         if logger_name is None:
             logger_name = 'ssh'
 
-        logger = logging.getLogger(logger_name)
+        logger = ExpyLogger.getLogger(logger_name)
         ssh = SSH(params, 'exit', title=title, logger_name=logger_name)
-        ssh.failure_level = logging.DEBUG
+        ssh.failure_level = ExpyLogger.DEBUG
         while ssh.fails():
             sleep(random.uniform(0, max_rand))
             logger.debug('Will try "ssh %s" again in %d + [0, %.2f) sec' %

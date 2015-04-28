@@ -1,4 +1,4 @@
-import logging
+from .expylogger import ExpyLogger
 
 
 class Runnable:
@@ -7,7 +7,7 @@ class Runnable:
             title = '{} {:d}'.format(type(self).__name__, id(self))
         self.title = title
 
-        self._logger = logging.getLogger(logger_name)
+        self._logger = ExpyLogger.getLogger(logger_name)
 
     def run(self):
         raise NotImplementedError('Runnable.run not implemented')
