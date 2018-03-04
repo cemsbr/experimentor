@@ -4,7 +4,7 @@ Expyrimenter
 .. image:: https://readthedocs.org/projects/expyrimenter/badge/?version=latest
    :alt: Documentation
    :target: http://expyrimenter.rtfd.org/en/latest/
-.. image:: https://pypip.in/version/expyrimenter/badge.svg
+.. image:: https://img.shields.io/pypi/v/expyrimenter.svg
    :alt: PyPI
    :target: https://pypi.python.org/pypi/expyrimenter
 .. image:: https://travis-ci.org/cemsbr/expyrimenter.svg?branch=master
